@@ -1,12 +1,17 @@
 2fa is a two-factor authentication agent.
 
+Build:
+```bash
+go mod vendor
+go build
+```
+
 Usage:
-
-    go get -u rsc.io/2fa
-
-    2fa -add [-7] [-8] [-hotp] name
-    2fa -list
-    2fa name
+```text
+2fa -add [-7] [-8] [-hotp] name
+2fa -list
+2fa name
+```
 
 `2fa -add name` adds a new key to the 2fa keychain with the given name. It
 prints a prompt to standard error and reads a two-factor key from standard
@@ -32,7 +37,7 @@ The default time-based authentication codes are derived from a hash of the
 key and the current time, so it is important that the system clock have at
 least one-minute accuracy.
 
-The keychain is stored unencrypted in the text file `$HOME/.2fa`.
+The keychain is stored unencrypted in the text file `$HOME/.2fa` or `XDG_CONFIG_HOME/2fa`.
 
 ## Example
 
