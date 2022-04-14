@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Installs to ~/.local/bin
 go mod vendor
 go build
