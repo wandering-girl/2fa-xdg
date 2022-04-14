@@ -107,6 +107,9 @@ func main() {
 	flag.Parse()
 
 	k := readKeychain(filepath.Join(os.Getenv("HOME"), ".2fa"))
+	if os.Getenv("XDG_CONFIG_HOME") != "" {
+ 		k = readKeychain(filepath.Join(os.Getenv("XDG_CONFIG_HOME"), "2fa"))
+ 	}
 
 	if *flagList {
 		if flag.NArg() != 0 {
