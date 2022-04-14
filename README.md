@@ -62,3 +62,7 @@ Or to type less:
     $ 2fa
     268346	github
     $ 
+
+## Credit
+To the [original project](https://github.com/rsc/2fa)
+[Ghost](https://github.com/ghost) for submitting the [pull request](https://github.com/rsc/2fa/pull/16)
